@@ -8,8 +8,7 @@ resource.addResource([
     src: {
       image: {
         type: 'png',
-        url:
-          'https://gw.alicdn.com/tfs/TB1DNzoOvb2gK0jSZK9XXaEgFXa-658-1152.webp',
+        url:'https://gw.alicdn.com/tfs/TB15Upxqk9l0K4jSZFKXXXFjpXa-750-1624.jpg',
       },
     },
     preload: true,
@@ -47,3 +46,4 @@ image.addComponent(
 );
 
 game.scene.addChild(image);
+game.start()
