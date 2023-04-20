@@ -7,6 +7,7 @@
     "@eva/eva.js": "^1.2.8",
     "@eva/plugin-renderer": "^1.2.8",
     "@eva/plugin-renderer-dragonbone": "^1.2.8",
+    "@eva/plugin-renderer-event": "^1.2.8",
     "@eva/plugin-renderer-img": "^1.2.8",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "@svgr/webpack": "^5.5.0",
