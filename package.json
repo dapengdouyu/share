@@ -5,6 +5,7 @@
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@eva/eva.js": "^1.2.8",
+    "@eva/fiber-eva": "0.0.1-alpha.0",
     "@eva/plugin-renderer": "^1.2.8",
     "@eva/plugin-renderer-dragonbone": "^1.2.8",
     "@eva/plugin-renderer-event": "^1.2.8",
@@ -47,6 +48,7 @@
     "react-app-polyfill": "^3.0.0",
     "react-dev-utils": "^12.0.1",
     "react-dom": "^18.2.0",
+    "react-reconciler": "^0.29.0",
     "react-refresh": "^0.11.0",
     "resolve": "^1.20.0",
     "resolve-url-loader": "^4.0.0",

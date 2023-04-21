@@ -35,7 +35,7 @@ resource.on(LOAD_EVENT.COMPLETE, () => {
       new DragonBoneSystem(),
       new EventSystem()
     ],
-      autoStart: true
+    autoStart: true
   })
 
   // 此处还在考虑如何设置默认场景的宽高
@@ -43,7 +43,7 @@ resource.on(LOAD_EVENT.COMPLETE, () => {
     width: 750,
     height: 1000
   }
-  // game.scene.background.transparent = true
+
 
   // dragonbone 的 origin 是失效的，将会按照 dragonbone 设计时的坐标重点定位
   const dragonBone = new GameObject('db', {
