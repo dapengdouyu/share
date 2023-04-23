@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import './App.css';
-// import "./util"
-import { render } from './react-eva'
+import { render } from './react-eva/two'
 import { resource, RESOURCE_TYPE, LOAD_EVENT } from '@eva/eva.js'
+import { useRef } from 'react';
 // 添加图片资源
 resource.addResource([
   {
@@ -38,11 +38,10 @@ resource.addResource([
 ])
 function CanvasRender() {
   const props = {
-    size: { width: 750, height: 1319 },
-    origin: { x: 0, y: 0 },
+    size: { width: 750, height: 1000 },
     position: {
       x: 0,
-      y: -319
+      y: 0
     },
     anchor: {
       x: 0,
@@ -53,27 +52,33 @@ function CanvasRender() {
     }
   }
   return <>
-    <image {...props}>
-    </image>
+    <image {...props} />
     <dragonBone {
-        ...{
-          anchor: {
-            x: 0.5,
-            y: 0.5
-          },
-          compoentProps:{
-            resource: 'dragonbone',
-            armatureName: 'armatureName'
-          }
+      ...{
+        anchor: {
+          x: 0.5,
+          y: 1
+        },
+        position: {
+          x: 0,
+          y: 3
+        },
+        compoentProps: {
+          resource: 'dragonbone',
+          armatureName: 'homepage_girl_ancient',
+          animationName: 'idle'
         }
-      }></dragonBone>
+      }
+    } />
+
   </>
 }
 
 function App() {
+  const ref = useRef({})
   useEffect(() => {
     resource.on(LOAD_EVENT.COMPLETE, () => {
-      render(<CanvasRender />, document.querySelector('#canvas'))
+      render(<CanvasRender />, ref.current)
     })
     resource.preload()
   }, [])
@@ -81,7 +86,7 @@ function App() {
   return (
     <div className="App">
       <div className='dom'>我是dom元素</div>
-      <canvas id="canvas" width="750" height="1000" />
+      <canvas id="canvas" width="750" height="1000" ref={ref} />
     </div>
   );
 }

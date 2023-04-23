@@ -142,8 +142,16 @@ function render(Component, canvas) {
     ],
     autoStart: true
   })
-
+  // 此处还在考虑如何设置默认场景的宽高
+  game.scene.transform.size = {
+    width: 750,
+    height: 1000
+  }
+  window.game=game
   const root = evaReconciler.createContainer(game.scene);
+
+
+  
   evaReconciler.updateContainer(Component, root, null);
 }
 
